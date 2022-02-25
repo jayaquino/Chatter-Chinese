@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>536459096952-2jrs081eit61vrdh4oeets6uq95f0uuf.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.536459096952-2jrs081eit61vrdh4oeets6uq95f0uuf</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAEbLfb-G8hTLNU_guB3OuBphyFvAbuv3o</string>
+	<key>GCM_SENDER_ID</key>
+	<string>536459096952</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>naquinojr.Chatter-Chinese</string>
+	<key>PROJECT_ID</key>
+	<string>chatter-chinese</string>
+	<key>STORAGE_BUCKET</key>
+	<string>chatter-chinese.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:536459096952:ios:c8785be87d8806d3980e8d</string>
+</dict>
+</plist>

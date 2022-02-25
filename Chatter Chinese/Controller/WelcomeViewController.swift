@@ -7,8 +7,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class WelcomeViewController: UIViewController {
 
+    
+    
+    
+    @IBAction func chatPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: K.userSegue, sender: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
