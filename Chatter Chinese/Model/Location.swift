@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct Location {
+    let lat: String
+    let lon: String
+}

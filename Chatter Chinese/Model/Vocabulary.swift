@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct Vocabulary {
+    let word : String
+    let pinyin : String
+    let zhuyin : String
+    let translation : String
+}

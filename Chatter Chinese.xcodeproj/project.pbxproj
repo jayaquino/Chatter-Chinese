@@ -7,23 +7,60 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		521760E427C3521E0005C2A2 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 521760E327C3521E0005C2A2 /* IQKeyboardManagerSwift */; };
+		521760EE27C4520C0005C2A2 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521760ED27C4520B0005C2A2 /* FirebaseManager.swift */; };
+		52B1C01227C4822000D28814 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B1C01127C4822000D28814 /* Location.swift */; };
 		52B5A8A927C0E1620021F091 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5A8A827C0E1620021F091 /* AppDelegate.swift */; };
 		52B5A8AB27C0E1620021F091 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5A8AA27C0E1620021F091 /* SceneDelegate.swift */; };
-		52B5A8AD27C0E1620021F091 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5A8AC27C0E1620021F091 /* ViewController.swift */; };
+		52B5A8AD27C0E1620021F091 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5A8AC27C0E1620021F091 /* WelcomeViewController.swift */; };
 		52B5A8B027C0E1620021F091 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B5A8AE27C0E1620021F091 /* Main.storyboard */; };
 		52B5A8B227C0E1640021F091 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52B5A8B127C0E1640021F091 /* Assets.xcassets */; };
 		52B5A8B527C0E1640021F091 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B5A8B327C0E1640021F091 /* LaunchScreen.storyboard */; };
+		52B5A8C227C0EE940021F091 /* Vocabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5A8C127C0EE940021F091 /* Vocabulary.swift */; };
+		52B5A8C427C0EF810021F091 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5A8C327C0EF810021F091 /* Message.swift */; };
+		52B5A8C627C0F0190021F091 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52B5A8C527C0F0180021F091 /* GoogleService-Info.plist */; };
+		52B5A8C827C0F2380021F091 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5A8C727C0F2380021F091 /* RegisterViewController.swift */; };
+		52B5A8CA27C0F3640021F091 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5A8C927C0F3640021F091 /* ChatViewController.swift */; };
+		52B5A8CC27C0F3EF0021F091 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5A8CB27C0F3EF0021F091 /* Constants.swift */; };
+		52B5A8CF27C0FC350021F091 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5A8CD27C0FC350021F091 /* MessageCell.swift */; };
+		52B5A8D027C0FC350021F091 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52B5A8CE27C0FC350021F091 /* MessageCell.xib */; };
+		52B5A8D327C1B8140021F091 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 52B5A8D227C1B8140021F091 /* FirebaseAuth */; };
+		52B5A8D527C1B8140021F091 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 52B5A8D427C1B8140021F091 /* FirebaseFirestore */; };
+		52B5A8D927C21A980021F091 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5A8D827C21A970021F091 /* Post.swift */; };
+		52B5A8DC27C21BBE0021F091 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5A8DA27C21BBC0021F091 /* PostCell.swift */; };
+		52B5A8DD27C21BBE0021F091 /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52B5A8DB27C21BBD0021F091 /* PostCell.xib */; };
+		52B5A8DF27C23DE60021F091 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5A8DE27C23DE50021F091 /* PostViewController.swift */; };
+		52BF592527C4C66C009C2DB0 /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BF592427C4C66C009C2DB0 /* AddPostViewController.swift */; };
+		52BF592727C5F6E0009C2DB0 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BF592627C5F6E0009C2DB0 /* Protocol.swift */; };
+		52BF592927C61598009C2DB0 /* PostDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BF592827C61597009C2DB0 /* PostDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		521760ED27C4520B0005C2A2 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		52B1C01127C4822000D28814 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		52B5A8A527C0E1620021F091 /* Chatter Chinese.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chatter Chinese.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B5A8A827C0E1620021F091 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52B5A8AA27C0E1620021F091 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		52B5A8AC27C0E1620021F091 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		52B5A8AC27C0E1620021F091 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		52B5A8AF27C0E1620021F091 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		52B5A8B127C0E1640021F091 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52B5A8B427C0E1640021F091 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52B5A8B627C0E1640021F091 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52B5A8C127C0EE940021F091 /* Vocabulary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vocabulary.swift; sourceTree = "<group>"; };
+		52B5A8C327C0EF810021F091 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		52B5A8C527C0F0180021F091 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		52B5A8C727C0F2380021F091 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		52B5A8C927C0F3640021F091 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		52B5A8CB27C0F3EF0021F091 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		52B5A8CD27C0FC350021F091 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		52B5A8CE27C0FC350021F091 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
+		52B5A8D827C21A970021F091 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		52B5A8DA27C21BBC0021F091 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		52B5A8DB27C21BBD0021F091 /* PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
+		52B5A8DE27C23DE50021F091 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		52BF592427C4C66C009C2DB0 /* AddPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
+		52BF592627C5F6E0009C2DB0 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		52BF592827C61597009C2DB0 /* PostDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +68,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52B5A8D327C1B8140021F091 /* FirebaseAuth in Frameworks */,
+				52B5A8D527C1B8140021F091 /* FirebaseFirestore in Frameworks */,
+				521760E427C3521E0005C2A2 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,13 +98,54 @@
 			children = (
 				52B5A8A827C0E1620021F091 /* AppDelegate.swift */,
 				52B5A8AA27C0E1620021F091 /* SceneDelegate.swift */,
-				52B5A8AC27C0E1620021F091 /* ViewController.swift */,
-				52B5A8AE27C0E1620021F091 /* Main.storyboard */,
+				52B5A8BC27C0EE410021F091 /* Model */,
+				52B5A8BD27C0EE480021F091 /* View */,
+				52B5A8BE27C0EE4F0021F091 /* Controller */,
 				52B5A8B127C0E1640021F091 /* Assets.xcassets */,
 				52B5A8B327C0E1640021F091 /* LaunchScreen.storyboard */,
 				52B5A8B627C0E1640021F091 /* Info.plist */,
+				52B5A8C527C0F0180021F091 /* GoogleService-Info.plist */,
+				52B5A8CB27C0F3EF0021F091 /* Constants.swift */,
 			);
 			path = "Chatter Chinese";
+			sourceTree = "<group>";
+		};
+		52B5A8BC27C0EE410021F091 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				52B5A8C127C0EE940021F091 /* Vocabulary.swift */,
+				52B5A8C327C0EF810021F091 /* Message.swift */,
+				52B5A8D827C21A970021F091 /* Post.swift */,
+				521760ED27C4520B0005C2A2 /* FirebaseManager.swift */,
+				52B1C01127C4822000D28814 /* Location.swift */,
+				52BF592627C5F6E0009C2DB0 /* Protocol.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		52B5A8BD27C0EE480021F091 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				52B5A8AE27C0E1620021F091 /* Main.storyboard */,
+				52B5A8CD27C0FC350021F091 /* MessageCell.swift */,
+				52B5A8CE27C0FC350021F091 /* MessageCell.xib */,
+				52B5A8DA27C21BBC0021F091 /* PostCell.swift */,
+				52B5A8DB27C21BBD0021F091 /* PostCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		52B5A8BE27C0EE4F0021F091 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				52B5A8AC27C0E1620021F091 /* WelcomeViewController.swift */,
+				52B5A8C727C0F2380021F091 /* RegisterViewController.swift */,
+				52B5A8C927C0F3640021F091 /* ChatViewController.swift */,
+				52B5A8DE27C23DE50021F091 /* PostViewController.swift */,
+				52BF592427C4C66C009C2DB0 /* AddPostViewController.swift */,
+				52BF592827C61597009C2DB0 /* PostDetailsViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +164,11 @@
 			dependencies = (
 			);
 			name = "Chatter Chinese";
+			packageProductDependencies = (
+				52B5A8D227C1B8140021F091 /* FirebaseAuth */,
+				52B5A8D427C1B8140021F091 /* FirebaseFirestore */,
+				521760E327C3521E0005C2A2 /* IQKeyboardManagerSwift */,
+			);
 			productName = "Chatter Chinese";
 			productReference = 52B5A8A527C0E1620021F091 /* Chatter Chinese.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +197,10 @@
 				Base,
 			);
 			mainGroup = 52B5A89C27C0E1620021F091;
+			packageReferences = (
+				52B5A8D127C1B8140021F091 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				521760E227C3521E0005C2A2 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			productRefGroup = 52B5A8A627C0E1620021F091 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,7 +215,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52B5A8D027C0FC350021F091 /* MessageCell.xib in Resources */,
+				52B5A8DD27C21BBE0021F091 /* PostCell.xib in Resources */,
 				52B5A8B527C0E1640021F091 /* LaunchScreen.storyboard in Resources */,
+				52B5A8C627C0F0190021F091 /* GoogleService-Info.plist in Resources */,
 				52B5A8B227C0E1640021F091 /* Assets.xcassets in Resources */,
 				52B5A8B027C0E1620021F091 /* Main.storyboard in Resources */,
 			);
@@ -138,9 +231,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52B5A8AD27C0E1620021F091 /* ViewController.swift in Sources */,
+				52BF592927C61598009C2DB0 /* PostDetailsViewController.swift in Sources */,
+				52B5A8AD27C0E1620021F091 /* WelcomeViewController.swift in Sources */,
+				52B5A8D927C21A980021F091 /* Post.swift in Sources */,
+				521760EE27C4520C0005C2A2 /* FirebaseManager.swift in Sources */,
 				52B5A8A927C0E1620021F091 /* AppDelegate.swift in Sources */,
+				52BF592527C4C66C009C2DB0 /* AddPostViewController.swift in Sources */,
+				52B5A8DF27C23DE60021F091 /* PostViewController.swift in Sources */,
+				52B5A8C427C0EF810021F091 /* Message.swift in Sources */,
+				52B5A8CA27C0F3640021F091 /* ChatViewController.swift in Sources */,
+				52B1C01227C4822000D28814 /* Location.swift in Sources */,
+				52B5A8C827C0F2380021F091 /* RegisterViewController.swift in Sources */,
 				52B5A8AB27C0E1620021F091 /* SceneDelegate.swift in Sources */,
+				52BF592727C5F6E0009C2DB0 /* Protocol.swift in Sources */,
+				52B5A8C227C0EE940021F091 /* Vocabulary.swift in Sources */,
+				52B5A8CC27C0F3EF0021F091 /* Constants.swift in Sources */,
+				52B5A8CF27C0FC350021F091 /* MessageCell.swift in Sources */,
+				52B5A8DC27C21BBE0021F091 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +467,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		521760E227C3521E0005C2A2 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		52B5A8D127C1B8140021F091 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		521760E327C3521E0005C2A2 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 521760E227C3521E0005C2A2 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+		52B5A8D227C1B8140021F091 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52B5A8D127C1B8140021F091 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		52B5A8D427C1B8140021F091 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52B5A8D127C1B8140021F091 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 52B5A89D27C0E1620021F091 /* Project object */;
 }

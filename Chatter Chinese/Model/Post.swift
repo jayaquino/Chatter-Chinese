@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct Post {
+    let sender : String
+    let title : String
+    let body : String
+    let votes : Int
+    let id : String
+}

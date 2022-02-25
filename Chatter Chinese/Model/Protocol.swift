@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+protocol isAbleToReceiveData {
+    func pass(title: String, body: String, sender: String)
+}
+
+protocol isAbleToDeleteData {
+    func pass(documentID: String)
+}

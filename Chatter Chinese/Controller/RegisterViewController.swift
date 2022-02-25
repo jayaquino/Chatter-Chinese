@@ -10,35 +10,20 @@ import Firebase
 
 class RegisterViewController: UIViewController {
     
-    
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var ageTextField: UITextField!
+    @IBOutlet weak var genderTextField: UITextField!
     
-    @IBAction func registerButtonPressed(_ sender: UIButton) {
-        if let email = emailTextField.text, let password = passwordTextField.text  {
-            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-                if let e = error {
-                    print(e)
-                } else {
-                    self.performSegue(withIdentifier: K.registerSegue, sender: self)
-                }
-            }
+    let firebaseManager = FirebaseManager()
+    
+    @IBAction func registerPressed(_ sender: UIButton) {
+        // Registers user data to the Firebase database. Perform the seguei in the meantime.
+        
+        if let username = usernameTextField.text, let age = ageTextField.text , let gender = genderTextField.text {
+            firebaseManager.registerUserInfo(username: username, age: age, gender: gender, sender: self, email: firebaseManager.getUser())
         }
     }
-    
-    @IBAction func loginButtonPressed(_ sender: UIButton) {
-        if let email = emailTextField.text, let password = passwordTextField.text {
-            Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
-                if let e = error {
-                    print(e)
-                } else {
-                    self.performSegue(withIdentifier: K.chatSegue, sender: self)
-                }
-            }
-        }
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
