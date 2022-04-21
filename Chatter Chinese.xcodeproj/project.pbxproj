@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		521760E427C3521E0005C2A2 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 521760E327C3521E0005C2A2 /* IQKeyboardManagerSwift */; };
 		521760EE27C4520C0005C2A2 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521760ED27C4520B0005C2A2 /* FirebaseManager.swift */; };
+		5260C66327E08EA10082D211 /* TranslationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5260C66227E08EA10082D211 /* TranslationManager.swift */; };
+		5260C66F27E0AA3D0082D211 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5260C66D27E0AA3D0082D211 /* DataModel.xcdatamodeld */; };
+		5260C67127E1CBE80082D211 /* CardsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5260C67027E1CBE70082D211 /* CardsTableViewController.swift */; };
+		52783FE227E3087D001935A8 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52783FE127E3087D001935A8 /* Animations.swift */; };
+		528977F727D5FE4000BF7538 /* CafeDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528977F627D5FE4000BF7538 /* CafeDetails.swift */; };
+		528A05A427D1D49200010721 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 528A05A327D1D49200010721 /* IQKeyboardManagerSwift */; };
 		52B1C01227C4822000D28814 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B1C01127C4822000D28814 /* Location.swift */; };
 		52B5A8A927C0E1620021F091 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5A8A827C0E1620021F091 /* AppDelegate.swift */; };
 		52B5A8AB27C0E1620021F091 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5A8AA27C0E1620021F091 /* SceneDelegate.swift */; };
@@ -16,7 +21,6 @@
 		52B5A8B027C0E1620021F091 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B5A8AE27C0E1620021F091 /* Main.storyboard */; };
 		52B5A8B227C0E1640021F091 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52B5A8B127C0E1640021F091 /* Assets.xcassets */; };
 		52B5A8B527C0E1640021F091 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B5A8B327C0E1640021F091 /* LaunchScreen.storyboard */; };
-		52B5A8C227C0EE940021F091 /* Vocabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5A8C127C0EE940021F091 /* Vocabulary.swift */; };
 		52B5A8C427C0EF810021F091 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5A8C327C0EF810021F091 /* Message.swift */; };
 		52B5A8C627C0F0190021F091 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52B5A8C527C0F0180021F091 /* GoogleService-Info.plist */; };
 		52B5A8C827C0F2380021F091 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5A8C727C0F2380021F091 /* RegisterViewController.swift */; };
@@ -24,8 +28,6 @@
 		52B5A8CC27C0F3EF0021F091 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5A8CB27C0F3EF0021F091 /* Constants.swift */; };
 		52B5A8CF27C0FC350021F091 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5A8CD27C0FC350021F091 /* MessageCell.swift */; };
 		52B5A8D027C0FC350021F091 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52B5A8CE27C0FC350021F091 /* MessageCell.xib */; };
-		52B5A8D327C1B8140021F091 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 52B5A8D227C1B8140021F091 /* FirebaseAuth */; };
-		52B5A8D527C1B8140021F091 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 52B5A8D427C1B8140021F091 /* FirebaseFirestore */; };
 		52B5A8D927C21A980021F091 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5A8D827C21A970021F091 /* Post.swift */; };
 		52B5A8DC27C21BBE0021F091 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5A8DA27C21BBC0021F091 /* PostCell.swift */; };
 		52B5A8DD27C21BBE0021F091 /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52B5A8DB27C21BBD0021F091 /* PostCell.xib */; };
@@ -33,10 +35,16 @@
 		52BF592527C4C66C009C2DB0 /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BF592427C4C66C009C2DB0 /* AddPostViewController.swift */; };
 		52BF592727C5F6E0009C2DB0 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BF592627C5F6E0009C2DB0 /* Protocol.swift */; };
 		52BF592927C61598009C2DB0 /* PostDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BF592827C61597009C2DB0 /* PostDetailsViewController.swift */; };
+		61A3F7134D6AE422A0205FAB /* Pods_Chatter_Chinese.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B88E4EAD85C6B459B91C606B /* Pods_Chatter_Chinese.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		521760ED27C4520B0005C2A2 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		5260C66227E08EA10082D211 /* TranslationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationManager.swift; sourceTree = "<group>"; };
+		5260C66E27E0AA3D0082D211 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		5260C67027E1CBE70082D211 /* CardsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsTableViewController.swift; sourceTree = "<group>"; };
+		52783FE127E3087D001935A8 /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
+		528977F627D5FE4000BF7538 /* CafeDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeDetails.swift; sourceTree = "<group>"; };
 		52B1C01127C4822000D28814 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		52B5A8A527C0E1620021F091 /* Chatter Chinese.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chatter Chinese.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B5A8A827C0E1620021F091 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,7 +54,6 @@
 		52B5A8B127C0E1640021F091 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52B5A8B427C0E1640021F091 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52B5A8B627C0E1640021F091 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		52B5A8C127C0EE940021F091 /* Vocabulary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vocabulary.swift; sourceTree = "<group>"; };
 		52B5A8C327C0EF810021F091 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		52B5A8C527C0F0180021F091 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		52B5A8C727C0F2380021F091 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +68,9 @@
 		52BF592427C4C66C009C2DB0 /* AddPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
 		52BF592627C5F6E0009C2DB0 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		52BF592827C61597009C2DB0 /* PostDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsViewController.swift; sourceTree = "<group>"; };
+		8C727FA06B1BDFC3F5071224 /* Pods-Chatter Chinese.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatter Chinese.release.xcconfig"; path = "Target Support Files/Pods-Chatter Chinese/Pods-Chatter Chinese.release.xcconfig"; sourceTree = "<group>"; };
+		B88E4EAD85C6B459B91C606B /* Pods_Chatter_Chinese.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chatter_Chinese.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEDD2366FE5C9901280D3EC8 /* Pods-Chatter Chinese.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatter Chinese.debug.xcconfig"; path = "Target Support Files/Pods-Chatter Chinese/Pods-Chatter Chinese.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,20 +78,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52B5A8D327C1B8140021F091 /* FirebaseAuth in Frameworks */,
-				52B5A8D527C1B8140021F091 /* FirebaseFirestore in Frameworks */,
-				521760E427C3521E0005C2A2 /* IQKeyboardManagerSwift in Frameworks */,
+				61A3F7134D6AE422A0205FAB /* Pods_Chatter_Chinese.framework in Frameworks */,
+				528A05A427D1D49200010721 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1DD94CE8811567EE95AA2E9F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B88E4EAD85C6B459B91C606B /* Pods_Chatter_Chinese.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		52B5A89C27C0E1620021F091 = {
 			isa = PBXGroup;
 			children = (
 				52B5A8A727C0E1620021F091 /* Chatter Chinese */,
 				52B5A8A627C0E1620021F091 /* Products */,
+				E3B2FAAE5C4AA2C56C191DC3 /* Pods */,
+				1DD94CE8811567EE95AA2E9F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,12 +132,15 @@
 		52B5A8BC27C0EE410021F091 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				52B5A8C127C0EE940021F091 /* Vocabulary.swift */,
+				5260C66D27E0AA3D0082D211 /* DataModel.xcdatamodeld */,
 				52B5A8C327C0EF810021F091 /* Message.swift */,
 				52B5A8D827C21A970021F091 /* Post.swift */,
-				521760ED27C4520B0005C2A2 /* FirebaseManager.swift */,
+				528977F627D5FE4000BF7538 /* CafeDetails.swift */,
 				52B1C01127C4822000D28814 /* Location.swift */,
 				52BF592627C5F6E0009C2DB0 /* Protocol.swift */,
+				521760ED27C4520B0005C2A2 /* FirebaseManager.swift */,
+				5260C66227E08EA10082D211 /* TranslationManager.swift */,
+				52783FE127E3087D001935A8 /* Animations.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -144,8 +166,18 @@
 				52B5A8DE27C23DE50021F091 /* PostViewController.swift */,
 				52BF592427C4C66C009C2DB0 /* AddPostViewController.swift */,
 				52BF592827C61597009C2DB0 /* PostDetailsViewController.swift */,
+				5260C67027E1CBE70082D211 /* CardsTableViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		E3B2FAAE5C4AA2C56C191DC3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BEDD2366FE5C9901280D3EC8 /* Pods-Chatter Chinese.debug.xcconfig */,
+				8C727FA06B1BDFC3F5071224 /* Pods-Chatter Chinese.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,9 +187,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52B5A8B927C0E1640021F091 /* Build configuration list for PBXNativeTarget "Chatter Chinese" */;
 			buildPhases = (
+				20C2611CD8B92A96CC3BA320 /* [CP] Check Pods Manifest.lock */,
 				52B5A8A127C0E1620021F091 /* Sources */,
 				52B5A8A227C0E1620021F091 /* Frameworks */,
 				52B5A8A327C0E1620021F091 /* Resources */,
+				552DB4519509AB88D73949F2 /* [CP] Embed Pods Frameworks */,
+				9E96809D87ADF1D109F32899 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -165,9 +200,7 @@
 			);
 			name = "Chatter Chinese";
 			packageProductDependencies = (
-				52B5A8D227C1B8140021F091 /* FirebaseAuth */,
-				52B5A8D427C1B8140021F091 /* FirebaseFirestore */,
-				521760E327C3521E0005C2A2 /* IQKeyboardManagerSwift */,
+				528A05A327D1D49200010721 /* IQKeyboardManagerSwift */,
 			);
 			productName = "Chatter Chinese";
 			productReference = 52B5A8A527C0E1620021F091 /* Chatter Chinese.app */;
@@ -198,8 +231,7 @@
 			);
 			mainGroup = 52B5A89C27C0E1620021F091;
 			packageReferences = (
-				52B5A8D127C1B8140021F091 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				521760E227C3521E0005C2A2 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				528A05A227D1D49200010721 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = 52B5A8A627C0E1620021F091 /* Products */;
 			projectDirPath = "";
@@ -226,6 +258,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		20C2611CD8B92A96CC3BA320 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Chatter Chinese-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		552DB4519509AB88D73949F2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chatter Chinese/Pods-Chatter Chinese-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chatter Chinese/Pods-Chatter Chinese-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Chatter Chinese/Pods-Chatter Chinese-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E96809D87ADF1D109F32899 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chatter Chinese/Pods-Chatter Chinese-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chatter Chinese/Pods-Chatter Chinese-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Chatter Chinese/Pods-Chatter Chinese-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		52B5A8A127C0E1620021F091 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -233,7 +324,9 @@
 			files = (
 				52BF592927C61598009C2DB0 /* PostDetailsViewController.swift in Sources */,
 				52B5A8AD27C0E1620021F091 /* WelcomeViewController.swift in Sources */,
+				52783FE227E3087D001935A8 /* Animations.swift in Sources */,
 				52B5A8D927C21A980021F091 /* Post.swift in Sources */,
+				5260C66F27E0AA3D0082D211 /* DataModel.xcdatamodeld in Sources */,
 				521760EE27C4520C0005C2A2 /* FirebaseManager.swift in Sources */,
 				52B5A8A927C0E1620021F091 /* AppDelegate.swift in Sources */,
 				52BF592527C4C66C009C2DB0 /* AddPostViewController.swift in Sources */,
@@ -241,11 +334,13 @@
 				52B5A8C427C0EF810021F091 /* Message.swift in Sources */,
 				52B5A8CA27C0F3640021F091 /* ChatViewController.swift in Sources */,
 				52B1C01227C4822000D28814 /* Location.swift in Sources */,
+				528977F727D5FE4000BF7538 /* CafeDetails.swift in Sources */,
 				52B5A8C827C0F2380021F091 /* RegisterViewController.swift in Sources */,
 				52B5A8AB27C0E1620021F091 /* SceneDelegate.swift in Sources */,
 				52BF592727C5F6E0009C2DB0 /* Protocol.swift in Sources */,
-				52B5A8C227C0EE940021F091 /* Vocabulary.swift in Sources */,
 				52B5A8CC27C0F3EF0021F091 /* Constants.swift in Sources */,
+				5260C66327E08EA10082D211 /* TranslationManager.swift in Sources */,
+				5260C67127E1CBE80082D211 /* CardsTableViewController.swift in Sources */,
 				52B5A8CF27C0FC350021F091 /* MessageCell.swift in Sources */,
 				52B5A8DC27C21BBE0021F091 /* PostCell.swift in Sources */,
 			);
@@ -276,6 +371,7 @@
 		52B5A8B727C0E1640021F091 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -308,6 +404,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_ONLY_ACTIVE_RESOURCES = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -337,6 +434,7 @@
 		52B5A8B827C0E1640021F091 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -370,6 +468,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_ONLY_ACTIVE_RESOURCES = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -391,6 +490,7 @@
 		};
 		52B5A8BA27C0E1640021F091 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEDD2366FE5C9901280D3EC8 /* Pods-Chatter Chinese.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -409,6 +509,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "naquinojr.Chatter-Chinese";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -419,6 +520,7 @@
 		};
 		52B5A8BB27C0E1640021F091 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C727FA06B1BDFC3F5071224 /* Pods-Chatter Chinese.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -469,41 +571,36 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		521760E227C3521E0005C2A2 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+		528A05A227D1D49200010721 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
 			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-		52B5A8D127C1B8140021F091 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 8.0.0;
+				kind = exactVersion;
+				version = 6.5.9;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		521760E327C3521E0005C2A2 /* IQKeyboardManagerSwift */ = {
+		528A05A327D1D49200010721 /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 521760E227C3521E0005C2A2 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			package = 528A05A227D1D49200010721 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
 			productName = IQKeyboardManagerSwift;
 		};
-		52B5A8D227C1B8140021F091 /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 52B5A8D127C1B8140021F091 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		52B5A8D427C1B8140021F091 /* FirebaseFirestore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 52B5A8D127C1B8140021F091 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
-		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		5260C66D27E0AA3D0082D211 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5260C66E27E0AA3D0082D211 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 5260C66E27E0AA3D0082D211 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 52B5A89D27C0E1620021F091 /* Project object */;
 }

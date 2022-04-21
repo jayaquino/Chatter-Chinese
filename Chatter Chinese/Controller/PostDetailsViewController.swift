@@ -9,28 +9,29 @@ import UIKit
 
 class PostDetailsViewController: UIViewController {
 
+    @IBOutlet weak var titleTextView: UITextView!
+    @IBOutlet weak var bodyTextView: UITextView!
+    @IBOutlet weak var votesLabel: UILabel!
+    @IBOutlet weak var deleteButton: UIButton!
+    
     var postTitle: String?
     var postSender: String?
     var postVotes: Int?
     var postBody: String?
     var docID : String?
-    
+    private var firebaseManager = FirebaseManager()
     var delegate: isAbleToDeleteData?
     
-    var firebaseManager = FirebaseManager()
-    
-    @IBOutlet weak var titleTextView: UITextView!
-    
-    @IBOutlet weak var bodyTextView: UITextView!
-    
-    @IBOutlet weak var votesTextView: UITextView!
-    
-    @IBOutlet weak var deleteButton: UIButton!
-    
     @IBAction func upvotePressed(_ sender: UIButton) {
+        print("adding user")
+        firebaseManager.addVoter(userID: firebaseManager.getUser(), documentID: docID!)
+        firebaseManager.updateVoteAmount(documentID: docID!, sender: self)
     }
     
     @IBAction func downvotePressed(_ sender: UIButton) {
+        print("removing voter")
+        firebaseManager.removeVoter(userID: firebaseManager.getUser(), documentID: docID!)
+        firebaseManager.updateVoteAmount(documentID: docID!, sender: self)
     }
     
     @IBAction func deletePressed(_ sender: UIButton) {
@@ -41,10 +42,9 @@ class PostDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bodyTextView.layer.cornerRadius = bodyTextView.frame.size.height/5
-        votesTextView.layer.cornerRadius = votesTextView.frame.size.height/5
         titleTextView.text = postTitle
         bodyTextView.text = postBody
-        votesTextView.text = "\(postVotes!)"
+        votesLabel.text = String(postVotes!)
         
         if firebaseManager.getUser() == postSender {
             print(true)
@@ -53,20 +53,8 @@ class PostDetailsViewController: UIViewController {
             print(false)
             firebaseManager.addVoter(userID: postSender!, documentID: docID!)
         }
-        firebaseManager.checkPostContainsUserVote(userID: postSender!, documentID: docID!)
+        
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 

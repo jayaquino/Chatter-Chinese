@@ -10,8 +10,8 @@ import UIKit
 class PostViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    var firebaseManager = FirebaseManager()
     
+    private var firebaseManager = FirebaseManager()
     var data : [Post] = [
         Post(sender: "me", title: "things about me", body: "my body", votes: 3, id: "123"),
         Post(sender: "you", title: "things about you", body: "your body", votes: 6, id: "123")]
@@ -20,23 +20,16 @@ class PostViewController: UIViewController {
         performSegue(withIdentifier: K.postToAddPost, sender: self)
     }
     
-    @IBAction func postPressed(_ sender: UIButton) {
-      
-    }
-    
-    @IBAction func unwind(segue: UIStoryboardSegue) {
-            print("This is the Post Controller")
-        }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: false);
         self.navigationController!.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.label]
-        title = "Posts"
         
+        // Set data source and delegate
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UINib(nibName: K.postCellNib, bundle: nil), forCellReuseIdentifier: K.cellIdentifier)
+        
         firebaseManager.loadPostData(collection: K.FStore.postCollectionName, lat: WelcomeViewController.lat, lon: WelcomeViewController.lon, sender: self)
     }
     
@@ -54,27 +47,11 @@ class PostViewController: UIViewController {
             destinationVC.postSender = data[row].sender
             destinationVC.docID = data[row].id
             destinationVC.delegate = self
-            
-            print(data[row].body)
-            print(data[row].title)
-            print(data[row].votes)
-            print(data[row].sender)
         }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
-//MARK: - UITableViewDataSource
-
+//MARK: - Table View Data Source Methods
 extension PostViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -90,12 +67,19 @@ extension PostViewController: UITableViewDataSource {
     }
 }
     
+//MARK: - Table View Delegate Methods
 extension PostViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         self.performSegue(withIdentifier: K.postToPostDetails, sender: indexPath)
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.pulse()
     }
 }
 
+//MARK: - Protocol, isAbleToReceiveData
 extension PostViewController: isAbleToReceiveData {
     func pass(title: String, body: String, sender: String) {
         firebaseManager.sendPost(title: title, body: body, sender: sender)
@@ -103,6 +87,7 @@ extension PostViewController: isAbleToReceiveData {
     }
 }
 
+//MARK: - Protocol, isAbleToDeleteData
 extension PostViewController : isAbleToDeleteData {
     func pass(documentID: String) {
         firebaseManager.deletePost(documentID: documentID)

@@ -18,7 +18,6 @@ struct FirebaseManager {
     let database = Firestore.firestore()
 
     //MARK: - User
-    
     func getUser() -> String {
         if let user = Auth.auth().currentUser?.email {
             return user
@@ -41,13 +40,16 @@ struct FirebaseManager {
         }
     }
     
-    func registerUserInfo(username: String, age: String, gender: String, sender: UIViewController, email: String) {
-        database.collection(K.FStore.userCollectionName).addDocument(data: [K.FStore.usernameField: username, K.FStore.ageField: age, K.FStore.genderField: gender, K.FStore.emailField: email]) { error in
+    func registerUserInfo(username: String, age: String, gender: String, language: String, sender: UIViewController, email: String) {
+        database.collection(K.FStore.userCollectionName).addDocument(data: [K.FStore.usernameField: username, K.FStore.ageField: age, K.FStore.genderField: gender, K.FStore.emailField: email, K.FStore.languageField: language]) { error in
             if let e = error {
                 print(e)
             } else {
                 DispatchQueue.main.async {
-                    sender.performSegue(withIdentifier: K.registerToChatSegue, sender: sender)
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let mainTabBarController = storyboard.instantiateViewController(identifier: "MainTabBar")
+                       
+                    (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(mainTabBarController)
                 }
             }
         }
@@ -68,8 +70,6 @@ struct FirebaseManager {
                         } else {
                             completionHandler(true)
                         }
-                        // for document in querySnapshot!.documents {
-                        // print("\(document.documentID) => \(document.data())")
                     }
                 }
             }
@@ -80,7 +80,7 @@ struct FirebaseManager {
         let usersRef = self.database.collection(K.FStore.userCollectionName)
         usersRef.whereField("email", isEqualTo: Auth.auth().currentUser?.email as Any).getDocuments() { (querySnapshot, error) in
             if let e = error {
-                print("Error getting username")
+                print("Error getting username \(e)")
             } else {
                 for document in querySnapshot!.documents {
                     sender.username = document.data()[K.FStore.usernameField] as! String
@@ -89,8 +89,20 @@ struct FirebaseManager {
         }
     }
     
-    //MARK: - Data
+    func getLanguage(sender: ChatViewController) {
+        let usersRef = self.database.collection(K.FStore.userCollectionName)
+        usersRef.whereField("email", isEqualTo: Auth.auth().currentUser?.email as Any).getDocuments() { (querySnapshot, error) in
+            if let e = error {
+                print("Error getting username \(e)")
+            } else {
+                for document in querySnapshot!.documents {
+                    sender.language = document.data()[K.FStore.languageField] as! String
+                }
+            }
+        }
+    }
     
+    //MARK: - Section for Chat
     func sendChat(messageBody: String, messageSender: String, messageUsername: String, lat: Double, lon: Double, sender: ChatViewController) {
         database.collection(K.FStore.messageCollectionName).addDocument(data: [K.FStore.senderField: messageSender, K.FStore.usernameField: messageUsername, K.FStore.bodyField: messageBody, K.FStore.dateField: Date().timeIntervalSince1970, K.FStore.latField: lat, K.FStore.lonField: lon]) {error in
             if let e = error {
@@ -105,10 +117,11 @@ struct FirebaseManager {
     
     func loadData(collection: String, lat: Double, lon: Double, sender: ChatViewController) {
         database.collection(collection)
-            .order(by: K.FStore.dateField)
+            .order(by: K.FStore.dateField, descending: true)
             .addSnapshotListener { querySnapShot, error in
                 if let snapShotDocuments = querySnapShot?.documents {
                     sender.data = []
+                    var counter = 0
                     for doc in snapShotDocuments{
                         let data = doc.data()
                         if let messageSender = data[K.FStore.senderField] as? String, let messageUsername = data[K.FStore.usernameField] as? String, let messageBody = data[K.FStore.bodyField] as? String, let messageLat = data[K.FStore.latField] as? Double, let messageLon = data[K.FStore.lonField] as? Double {
@@ -129,12 +142,17 @@ struct FirebaseManager {
                                 }
                             }
                         }
+                        counter += 1
+                        if counter == 100 {
+                            break
+                        }
                         
                     }
                 }
             }
     }
     
+    //MARK: - Section for Posts
     func loadPostData (collection: String, lat: Double, lon: Double, sender: PostViewController) {
         database.collection(collection)
             .order(by: K.FStore.dateField)
@@ -162,6 +180,7 @@ struct FirebaseManager {
                 }
             }
     }
+    
     func sendPost(title: String, body: String, sender: String) {
         database.collection(K.FStore.postCollectionName).addDocument(data: [K.FStore.senderField: sender, K.FStore.titleField: title, K.FStore.bodyField: body, K.FStore.voteField: Int(0), K.FStore.voterField: sender ,K.FStore.dateField: Date().timeIntervalSince1970]) {error in
             if let e = error {
@@ -181,15 +200,38 @@ struct FirebaseManager {
             K.FStore.voterField: FieldValue.arrayUnion([userID])])
     }
     
-    func checkPostContainsUserVote(userID: String, documentID: String) {
+    func removeVoter(userID: String, documentID: String) {
+        database.collection(K.FStore.postCollectionName).document(documentID).updateData([K.FStore.voterField: FieldValue.arrayRemove([userID])])
+    }
+    
+    func getVotes(documentID: String) {
+        
+    }
+    
+    func updateVoteAmount(documentID: String, sender: PostDetailsViewController) {
         print("checking document...")
         database.collection(K.FStore.postCollectionName).document(documentID).getDocument(completion: { documentSnapshot, error in
-            if documentSnapshot?.data()?[K.FStore.voterField] as? [String] != nil {
-                if (documentSnapshot?.data()?[K.FStore.voterField] as! [String]).contains(userID) {
-                    print(userID)
-                }
+            if let voters = documentSnapshot?.data()?[K.FStore.voterField] as? [String] {
+                print(voters.count)
+                database.collection(K.FStore.postCollectionName).document(documentID).updateData([
+                    K.FStore.voteField: voters.count])
+                sender.votesLabel.text = String(voters.count)
             }
             
         })
+        
     }
+    
+    //MARK: - Section for Cafe
+    
+    func addAvailability (location: String, address: String, arriveTime: String, departTime: String) {
+        database.collection(K.FStore.cafeCollectionName).addDocument(data: [K.FStore.locationField: location, K.FStore.locationAddressField: address,K.FStore.arriveField: arriveTime, K.FStore.departField: departTime,K.FStore.dateField: Date().timeIntervalSince1970]) {error in
+            if let e = error {
+                print(e)
+            } else {
+
+            }
+        }
+    }
+    
 }

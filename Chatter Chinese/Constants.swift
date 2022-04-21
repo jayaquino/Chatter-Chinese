@@ -10,12 +10,9 @@ import Foundation
 struct K {
     static let appName = "Chatter Chinese"
     static let welcomeToRegisterSegue = "WelcomeToRegister"
-    static let registerToChatSegue = "RegisterToChat"
-    static let welcomeToChatSegue = "WelcomeToChat"
     static let postToAddPost = "PostToAddPost"
-    static let chatToPost = "ChatToPost"
-    static let postToChat = "PostToChat"
     static let postToPostDetails = "PostToPostDetails"
+    static let cafeToCafeDetails = "CafeToCafeDetails"
     static let cellIdentifier = "ReusableCell"
     static let messageCellNib = "MessageCell"
     static let postCellNib = "PostCell"
@@ -47,5 +44,14 @@ struct K {
         static let voteField = "vote"
         static let voterField = "voters"
         static let docID = "id"
+        
+        static let languageField = "language"
+        
+        // Cafe
+        static let cafeCollectionName = "cafe"
+        static let locationField = "location"
+        static let locationAddressField = "address"
+        static let arriveField = "arrivalTime"
+        static let departField = "departTime"
     }
 }

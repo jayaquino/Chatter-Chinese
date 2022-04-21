@@ -12,14 +12,6 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var votes: UILabel!
     
-    @IBAction func upVotePressed(_ sender: UIButton) {
-
-    }
-    
-    @IBAction func downVotePressed(_ sender: Any) {
-    
-    }
-    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -27,5 +19,4 @@ class PostCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-    
 }
